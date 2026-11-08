@@ -15,6 +15,15 @@ pnpm dev
 
 Abre la consola del navegador (F12) y déjala abierta mientras trabajas.
 
+> **¿Te salió `ERR_PNPM_IGNORED_BUILDS` al hacer `pnpm install`?**
+> Es normal. pnpm bloquea por seguridad los scripts que traen los paquetes al instalarse, porque un paquete malicioso podría ejecutar código en tu computador. Si el paquete es de confianza (aquí es `esbuild`, que usa Vite), hay que darle permiso una vez:
+>
+> ```bash
+> pnpm approve-builds
+> ```
+>
+> Marca `esbuild` con la barra espaciadora, confirma con Enter y vuelve a correr `pnpm install`. Los avisos amarillos `[WARN]` de velocidad de descarga o de "Update available" se pueden ignorar.
+
 ## Tickets obligatorios
 
 ### Ticket 1 · La pestaña cuenta el carrito
